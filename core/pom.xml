@@ -6,13 +6,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.peregrinevanilla</groupId>
-        <artifactId>peregrinevanilla-parent</artifactId>
+        <groupId>com.postervanilla</groupId>
+        <artifactId>postervanilla-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>peregrinevanilla-core</artifactId>
+    <artifactId>postervanilla-core</artifactId>
     <packaging>bundle</packaging>
 
     <name>Poster Theme - Core</name>
@@ -27,7 +27,7 @@
                 <configuration>
                     <instructions>
                         <Embed-Dependency>*;scope=compile;inline=true</Embed-Dependency>
-                        <Sling-Model-Packages>com.peregrinevanilla.models</Sling-Model-Packages>
+                        <Sling-Model-Packages>com.postervanilla.models</Sling-Model-Packages>
                         <_dsannotations>*</_dsannotations>
                         <_metatypeannotations>*</_metatypeannotations>
                         <_removeheaders>

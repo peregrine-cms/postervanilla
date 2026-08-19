@@ -10,29 +10,29 @@
         jcr:title="Poster"
         jcr:description="Reference page for the Poster theme"
         sling:resourceType="pagerenderervanilla/structure/page"
-        template="/content/peregrinevanilla/templates/standard">
+        template="/content/postervanilla/templates/standard">
 
       <main jcr:primaryType="nt:unstructured"
           sling:resourceType="pagerenderervanilla/structure/container">
 
         <hero jcr:primaryType="nt:unstructured"
-            sling:resourceType="peregrinevanilla/components/hero"
+            sling:resourceType="postervanilla/components/hero"
             title="What you edit is what you ship"
             footnote="literally. The editor renders your real site - the page you drag components onto is the page a visitor gets."
             ctatext="Read the docs"
-            ctalink="/content/peregrinevanilla/pages/index"
+            ctalink="/content/postervanilla/pages/index"
             cta2text="GitHub"
             cta2link="https://github.com/headwirecom/peregrine-cms"
-            image="/content/peregrinevanilla/assets/mark.svg"
+            image="/content/postervanilla/assets/mark.svg"
             imagealt=""/>
 
         <ticker jcr:primaryType="nt:unstructured"
-            sling:resourceType="peregrinevanilla/components/ticker"
+            sling:resourceType="postervanilla/components/ticker"
             text="OPEN SOURCE · APACHE-2.0 · BUILT ON APACHE SLING · CONTENT IS A REPOSITORY · DOCS FROM PASSING TESTS · **ONE CONTAINER TO TRY IT** · "
             speed="normal"/>
 
         <claims jcr:primaryType="nt:unstructured"
-            sling:resourceType="peregrinevanilla/components/claims">
+            sling:resourceType="postervanilla/components/claims">
           <items jcr:primaryType="nt:unstructured">
             <i0 jcr:primaryType="nt:unstructured" title="Docs that cannot lie" text="Every screenshot in the manual comes from a passing, asserted test run against a clean install."/>
             <i1 jcr:primaryType="nt:unstructured" title="Everything is content" text="Pages, assets, objects, even the console. One tree, versioned, readable as JSON from anywhere."/>
@@ -41,44 +41,44 @@
         </claims>
 
         <manual jcr:primaryType="nt:unstructured"
-            sling:resourceType="peregrinevanilla/components/band"
+            sling:resourceType="postervanilla/components/band"
             background="orange" bordered="true" contained="true">
           <heading jcr:primaryType="nt:unstructured"
-              sling:resourceType="peregrinevanilla/components/blkheading"
+              sling:resourceType="postervanilla/components/blkheading"
               text="The manual" size="band" level="h2"/>
           <index jcr:primaryType="nt:unstructured"
-              sling:resourceType="peregrinevanilla/components/indexlist"
+              sling:resourceType="postervanilla/components/indexlist"
               startat="1">
             <items jcr:primaryType="nt:unstructured">
-              <i0 jcr:primaryType="nt:unstructured" title="Your first website" tag="START HERE" link="/content/peregrinevanilla/pages/index"/>
-              <i1 jcr:primaryType="nt:unstructured" title="Pages" tag="START HERE" link="/content/peregrinevanilla/pages/index"/>
-              <i2 jcr:primaryType="nt:unstructured" title="The editor" tag="AUTHORING" link="/content/peregrinevanilla/pages/index"/>
-              <i3 jcr:primaryType="nt:unstructured" title="Content · Assets · Objects · Templates" tag="AUTHORING" link="/content/peregrinevanilla/pages/index"/>
-              <i4 jcr:primaryType="nt:unstructured" title="Publishing · Administration" tag="RUNNING" link="/content/peregrinevanilla/pages/index"/>
-              <i5 jcr:primaryType="nt:unstructured" title="Tools · For developers" tag="REFERENCE" link="/content/peregrinevanilla/pages/index"/>
+              <i0 jcr:primaryType="nt:unstructured" title="Your first website" tag="START HERE" link="/content/postervanilla/pages/index"/>
+              <i1 jcr:primaryType="nt:unstructured" title="Pages" tag="START HERE" link="/content/postervanilla/pages/index"/>
+              <i2 jcr:primaryType="nt:unstructured" title="The editor" tag="AUTHORING" link="/content/postervanilla/pages/index"/>
+              <i3 jcr:primaryType="nt:unstructured" title="Content · Assets · Objects · Templates" tag="AUTHORING" link="/content/postervanilla/pages/index"/>
+              <i4 jcr:primaryType="nt:unstructured" title="Publishing · Administration" tag="RUNNING" link="/content/postervanilla/pages/index"/>
+              <i5 jcr:primaryType="nt:unstructured" title="Tools · For developers" tag="REFERENCE" link="/content/postervanilla/pages/index"/>
             </items>
           </index>
         </manual>
 
         <tryit jcr:primaryType="nt:unstructured"
-            sling:resourceType="peregrinevanilla/components/band"
+            sling:resourceType="postervanilla/components/band"
             background="ink" contained="true">
           <heading jcr:primaryType="nt:unstructured"
-              sling:resourceType="peregrinevanilla/components/blkheading"
+              sling:resourceType="postervanilla/components/blkheading"
               text="Try it" size="band" level="h2"/>
           <cmd jcr:primaryType="nt:unstructured"
-              sling:resourceType="peregrinevanilla/components/command"
+              sling:resourceType="postervanilla/components/command"
               text="docker run -p 8080:8080 peregrinecms/peregrine-cms:v2-preview"
               prompt="$"
               comment="console at /content/adminv2 once it boots"/>
         </tryit>
 
         <nav jcr:primaryType="nt:unstructured"
-            sling:resourceType="peregrinevanilla/components/pagenav"
+            sling:resourceType="postervanilla/components/pagenav"
             uptext="All chapters"
-            uplink="/content/peregrinevanilla/pages/index"
+            uplink="/content/postervanilla/pages/index"
             nexttext="Your first website"
-            nextlink="/content/peregrinevanilla/pages/index"/>
+            nextlink="/content/postervanilla/pages/index"/>
 
       </main>
     </jcr:content>
