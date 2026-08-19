@@ -1,0 +1,12 @@
+com\postervanilla\models\TickerModel.class
+com\postervanilla\models\BlktextModel.class
+com\postervanilla\models\CommandModel.class
+com\postervanilla\models\IndexlistModel.class
+com\postervanilla\models\ClaimsModel.class
+com\postervanilla\models\HeaderModel.class
+com\postervanilla\models\HeroModel.class
+com\postervanilla\models\FooterModel.class
+com\postervanilla\models\BlkbuttonModel.class
+com\postervanilla\models\BandModel.class
+com\postervanilla\models\PagenavModel.class
+com\postervanilla\models\BlkheadingModel.class

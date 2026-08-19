@@ -1,0 +1,71 @@
+{
+ "groups": [
+  {
+   "legend": "content",
+   "fields": [
+    {
+     "type": "input",
+     "inputType": "text",
+     "placeholder": "prevtext",
+     "label": "Previous label",
+     "model": "prevtext"
+    },
+    {
+     "type": "pathbrowser",
+     "browserRoot": "/content",
+     "placeholder": "prevlink",
+     "label": "Previous link",
+     "model": "prevlink"
+    },
+    {
+     "type": "input",
+     "inputType": "text",
+     "placeholder": "uptext",
+     "label": "Up label",
+     "model": "uptext"
+    },
+    {
+     "type": "pathbrowser",
+     "browserRoot": "/content",
+     "placeholder": "uplink",
+     "label": "Up link",
+     "model": "uplink"
+    },
+    {
+     "type": "input",
+     "inputType": "text",
+     "placeholder": "nexttext",
+     "label": "Next label",
+     "model": "nexttext"
+    },
+    {
+     "type": "pathbrowser",
+     "browserRoot": "/content",
+     "placeholder": "nextlink",
+     "label": "Next link",
+     "model": "nextlink"
+    },
+    {
+     "type": "material-select",
+     "values": [
+      {
+       "name": "Always visible",
+       "value": "all"
+      },
+      {
+       "name": "Desktop only (821px and up)",
+       "value": "desktop"
+      },
+      {
+       "name": "Mobile only (up to 820px)",
+       "value": "mobile"
+      }
+     ],
+     "placeholder": "visibility",
+     "label": "Visibility",
+     "model": "visibility"
+    }
+   ]
+  }
+ ]
+}

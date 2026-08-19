@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/postervanilla"/>
+    <filter root="/etc/felibs/postervanilla"/>
+    <filter root="/content/postervanilla"/>
+    <filter root="/apps/postervanilla/install/postervanilla-core-1.0-SNAPSHOT.jar"/>
+</workspaceFilter>

@@ -1,0 +1,85 @@
+{
+ "groups": [
+  {
+   "legend": "content",
+   "fields": [
+    {
+     "type": "input",
+     "inputType": "text",
+     "placeholder": "title",
+     "label": "Headline (kept short - it sets at display size)",
+     "model": "title"
+    },
+    {
+     "type": "input",
+     "inputType": "text",
+     "placeholder": "footnote",
+     "label": "Footnote (the asterisk text)",
+     "model": "footnote"
+    },
+    {
+     "type": "input",
+     "inputType": "text",
+     "placeholder": "ctatext",
+     "label": "Primary button",
+     "model": "ctatext"
+    },
+    {
+     "type": "pathbrowser",
+     "browserRoot": "/content",
+     "placeholder": "ctalink",
+     "label": "Primary link",
+     "model": "ctalink"
+    },
+    {
+     "type": "input",
+     "inputType": "text",
+     "placeholder": "cta2text",
+     "label": "Secondary button",
+     "model": "cta2text"
+    },
+    {
+     "type": "pathbrowser",
+     "browserRoot": "/content",
+     "placeholder": "cta2link",
+     "label": "Secondary link",
+     "model": "cta2link"
+    },
+    {
+     "type": "pathbrowser",
+     "browserRoot": "/content",
+     "placeholder": "image",
+     "label": "Mark (cropped large at the right edge)",
+     "model": "image"
+    },
+    {
+     "type": "input",
+     "inputType": "text",
+     "placeholder": "imagealt",
+     "label": "Mark alt text",
+     "model": "imagealt"
+    },
+    {
+     "type": "material-select",
+     "values": [
+      {
+       "name": "Always visible",
+       "value": "all"
+      },
+      {
+       "name": "Desktop only (821px and up)",
+       "value": "desktop"
+      },
+      {
+       "name": "Mobile only (up to 820px)",
+       "value": "mobile"
+      }
+     ],
+     "placeholder": "visibility",
+     "label": "Visibility",
+     "model": "visibility"
+    }
+   ]
+  }
+ ]
+}

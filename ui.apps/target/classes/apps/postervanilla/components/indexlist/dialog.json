@@ -1,0 +1,72 @@
+{
+ "groups": [
+  {
+   "legend": "content",
+   "fields": [
+    {
+     "type": "collection",
+     "multifield": true,
+     "fieldLabel": [
+      [
+       "title"
+      ],
+      "value"
+     ],
+     "fields": [
+      {
+       "type": "input",
+       "inputType": "text",
+       "placeholder": "title",
+       "label": "Title",
+       "model": "title"
+      },
+      {
+       "type": "input",
+       "inputType": "text",
+       "placeholder": "tag",
+       "label": "Tag (right-hand label)",
+       "model": "tag"
+      },
+      {
+       "type": "pathbrowser",
+       "browserRoot": "/content",
+       "placeholder": "link",
+       "label": "Link",
+       "model": "link"
+      }
+     ],
+     "placeholder": "items",
+     "label": "Rows",
+     "model": "items"
+    },
+    {
+     "type": "input",
+     "inputType": "text",
+     "placeholder": "startat",
+     "label": "First number",
+     "model": "startat"
+    },
+    {
+     "type": "material-select",
+     "values": [
+      {
+       "name": "Always visible",
+       "value": "all"
+      },
+      {
+       "name": "Desktop only (821px and up)",
+       "value": "desktop"
+      },
+      {
+       "name": "Mobile only (up to 820px)",
+       "value": "mobile"
+      }
+     ],
+     "placeholder": "visibility",
+     "label": "Visibility",
+     "model": "visibility"
+    }
+   ]
+  }
+ ]
+}
