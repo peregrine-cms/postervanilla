@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:primaryType="per:Site"
-    jcr:title="Poster (Vanilla)"
-    jcr:description="Bold graphic theme for Peregrine CMS: display type as image, flat colour fields, heavy rules. Rendered by the framework-free vanilla renderer."
-    sourceSite="pagerenderervanilla"
-    internal="false"
-    template="true"/>
