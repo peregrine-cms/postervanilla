@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="per:Page">
+<!-- sling:OrderedFolder, not per:Page - bayviewvanilla parity, and it
+     matters: the versioned resolver exempts folder types, while a per:Page
+     with no jcr:content wraps to null under a version label. -->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OrderedFolder"
+    jcr:title="Pages">
     <index/>
 </jcr:root>
