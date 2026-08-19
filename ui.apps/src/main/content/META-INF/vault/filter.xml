@@ -2,7 +2,7 @@
 <workspaceFilter version="1.0">
     <!-- The theme owns and REPLACES its own namespaces on every install.
          Production content belongs in a tenant created FROM this theme. -->
-    <filter root="/apps/postervanilla"/>
-    <filter root="/etc/felibs/postervanilla"/>
-    <filter root="/content/postervanilla"/>
+    <filter root="/apps/peregrinevanilla"/>
+    <filter root="/etc/felibs/peregrinevanilla"/>
+    <filter root="/content/peregrinevanilla"/>
 </workspaceFilter>

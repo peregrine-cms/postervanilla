@@ -6,13 +6,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.postervanilla</groupId>
-        <artifactId>postervanilla-parent</artifactId>
+        <groupId>com.peregrinevanilla</groupId>
+        <artifactId>peregrinevanilla-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>postervanilla-ui.apps</artifactId>
+    <artifactId>peregrinevanilla-ui.apps</artifactId>
     <packaging>content-package</packaging>
 
     <description>JCR content package for the Poster Vanilla theme</description>
@@ -47,7 +47,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <failOnMissingEmbed>true</failOnMissingEmbed>
-                    <group>postervanilla</group>
+                    <group>peregrinevanilla</group>
                 </configuration>
                 <executions>
                     <execution>
@@ -55,11 +55,11 @@
                             <goal>package</goal>
                         </goals>
                         <configuration>
-                            <embeddedTarget>/apps/postervanilla/install</embeddedTarget>
+                            <embeddedTarget>/apps/peregrinevanilla/install</embeddedTarget>
                             <embeddeds>
                                 <embedded>
                                     <groupId>${project.groupId}</groupId>
-                                    <artifactId>postervanilla-core</artifactId>
+                                    <artifactId>peregrinevanilla-core</artifactId>
                                     <generateFilter>true</generateFilter>
                                 </embedded>
                             </embeddeds>
@@ -73,7 +73,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>postervanilla-core</artifactId>
+            <artifactId>peregrinevanilla-core</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
