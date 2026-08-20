@@ -72,6 +72,10 @@
               text="docker run -p 8080:8080 peregrinecms/peregrine-cms:v2-preview"
               prompt="$"
               comment="console at /content/adminv2 once it boots"/>
+          <code jcr:primaryType="nt:unstructured"
+              sling:resourceType="postervanilla/components/codeblock"
+              filename="hello.js"
+              code="// a multi-line file, shown verbatim&#xA;PV.components['components-hello'] = function (node) {&#xA;  return PV.el('p', null, node.text || 'hello');&#xA;};"/>
         </tryit>
 
         <nav jcr:primaryType="nt:unstructured"

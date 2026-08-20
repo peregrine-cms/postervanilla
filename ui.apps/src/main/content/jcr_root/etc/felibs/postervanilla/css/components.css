@@ -107,6 +107,27 @@ a.pst-indexlist__row:hover { background: var(--pst-ink); color: var(--pst-orange
 .pst-command__comment { font-family: var(--pst-font-mono); font-size: 12.5px; color: var(--pst-soft); }
 .pst-band--ink .pst-command__comment { color: rgba(245,241,232,0.75); }
 
+/* codeblock: a whole file, verbatim. Same box language as the command line,
+   sized for reading many lines; long lines scroll inside the box. */
+.pst-codeblock { margin: 0; }
+.pst-codeblock__file {
+  display: inline-block; font-family: var(--pst-font-mono); font-weight: 700;
+  font-size: 12.5px; letter-spacing: 0.06em; text-transform: none;
+  background: var(--pst-ink); color: var(--pst-paper);
+  padding: 6px 14px; margin: 0;
+}
+.pst-codeblock__pre {
+  margin: 0; background: var(--pst-paper); color: var(--pst-ink);
+  border: var(--pst-rule) solid var(--pst-ink);
+  padding: 18px 22px; overflow-x: auto;
+}
+.pst-codeblock__pre code {
+  font-family: var(--pst-font-mono); font-size: 13.5px; line-height: 1.55;
+  background: none; padding: 0; white-space: pre;
+}
+.pst-band--ink .pst-codeblock__file { background: var(--pst-paper); color: var(--pst-ink); }
+.pst-band--ink .pst-codeblock__pre { border-color: var(--pst-paper); }
+
 /* ---- blkimage (the figure) ---------------------------------------------------- */
 .pst-blkimage { margin: 0; display: flex; flex-direction: column; gap: 10px; }
 .pst-blkimage__img {

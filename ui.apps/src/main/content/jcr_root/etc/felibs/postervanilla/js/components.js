@@ -207,6 +207,19 @@
     return wrap;
   };
 
+  // multi-line source, verbatim. textContent, never innerHTML - the code is
+  // authored text, not markup.
+  PV.components['components-codeblock'] = function (node) {
+    var wrap = el('figure', { 'class': 'pst-codeblock' + vis(node), 'data-per-path': node.path });
+    if (node.filename) wrap.appendChild(el('figcaption', { 'class': 'pst-codeblock__file' }, node.filename));
+    var pre = el('pre', { 'class': 'pst-codeblock__pre' });
+    var code = document.createElement('code');
+    code.textContent = node.code || (EDIT ? '// paste the code in the dialog' : '');
+    pre.appendChild(code);
+    wrap.appendChild(pre);
+    return wrap;
+  };
+
   PV.components['components-blkimage'] = function (node) {
     var wrap = el('figure', { 'class': 'pst-blkimage' + (truthy(node.plain) ? ' pst-blkimage--plain' : '') + vis(node), 'data-per-path': node.path });
     if (node.image) {

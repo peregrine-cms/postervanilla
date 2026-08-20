@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "legend": "content",
+      "fields": [
+        {
+          "type": "input",
+          "inputType": "text",
+          "placeholder": "filename",
+          "label": "Filename tab (optional)",
+          "model": "filename",
+          "x_form_group": "content"
+        },
+        {
+          "type": "material-textarea",
+          "rows": 14,
+          "max": 500,
+          "placeholder": "code",
+          "label": "The code, verbatim",
+          "model": "code",
+          "x_form_group": "content"
+        },
+        {
+          "type": "material-select",
+          "values": [
+            {
+              "name": "Always visible",
+              "value": "all"
+            },
+            {
+              "name": "Desktop only (821px and up)",
+              "value": "desktop"
+            },
+            {
+              "name": "Mobile only (up to 820px)",
+              "value": "mobile"
+            }
+          ],
+          "placeholder": "visibility",
+          "label": "Visibility",
+          "model": "visibility",
+          "x_form_group": "content"
+        }
+      ]
+    }
+  ]
+}

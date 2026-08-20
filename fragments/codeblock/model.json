@@ -1,0 +1,28 @@
+{
+  "definitions": {
+    "Codeblock": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Filename tab (optional)",
+          "x-form-type": "text"
+        },
+        "code": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "The code, verbatim",
+          "x-form-type": "textarea",
+          "x-form-rows": 14
+        },
+        "visibility": {
+          "$ref": "schemas/shared.json#/definitions/visibility"
+        }
+      }
+    }
+  }
+}

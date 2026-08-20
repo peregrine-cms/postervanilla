@@ -1,0 +1,8 @@
+{
+  "title": "Code Block",
+  "group": "Blocks",
+  "model": {
+    "filename": "hello.js",
+    "code": "// a multi-line file, shown verbatim\nPV.components['components-hello'] = function (node) {\n  return PV.el('p', null, node.text || 'hello');\n};"
+  }
+}
