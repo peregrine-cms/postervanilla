@@ -1,4 +1,4 @@
-<%@ page session="false" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
+<%@ page session="false" trimDirectiveWhitespaces="true" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
     import="org.apache.sling.api.resource.ValueMap" %>
 <%@ taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0" %>
 <sling:defineObjects/>
@@ -11,6 +11,6 @@
         .replaceAll("(?i)<br\\s*/?>", "\n").replaceAll("(?i)</p>", "\n\n")
         .replaceAll("<[^>]+>", " ").replaceAll("&nbsp;", " ").replaceAll("&amp;", "&")
         .replaceAll("[ \\t]+", " ").replaceAll("\\n{3,}", "\n\n").trim();
-    if (!v.isEmpty()) out.write("\n" + v + "\n\n");
+    if (!v.isEmpty()) out.write(v + "\n\n");
   }
 %>

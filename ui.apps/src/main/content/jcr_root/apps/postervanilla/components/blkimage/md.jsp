@@ -1,4 +1,4 @@
-<%@ page session="false" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
+<%@ page session="false" trimDirectiveWhitespaces="true" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
     import="org.apache.sling.api.resource.ValueMap" %>
 <%@ taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0" %>
 <sling:defineObjects/>
@@ -8,14 +8,14 @@
   ValueMap vm = resource.getValueMap();
   {
     String v = vm.get("image", "").trim();
-    if (!v.isEmpty()) out.write("\n![" + vm.get("imagealt", "") + "](" + v + ")\n\n");
+    if (!v.isEmpty()) out.write("![" + vm.get("imagealt", "") + "](" + v + ")\n\n");
   }
   {
     String v = vm.get("caption", "").replaceAll("<[^>]+>", " ").replaceAll("[ \\t]+", " ").trim();
-    if (!v.isEmpty()) out.write("\n" + v + "\n\n");
+    if (!v.isEmpty()) out.write(v + "\n\n");
   }
   {
     String v = vm.get("videourl", "").replaceAll("<[^>]+>", " ").replaceAll("[ \\t]+", " ").trim();
-    if (!v.isEmpty()) out.write("\n" + v + "\n\n");
+    if (!v.isEmpty()) out.write(v + "\n\n");
   }
 %>

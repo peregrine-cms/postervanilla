@@ -1,4 +1,4 @@
-<%@ page session="false" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
+<%@ page session="false" trimDirectiveWhitespaces="true" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
     import="org.apache.sling.api.resource.ValueMap" %>
 <%@ taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0" %>
 <sling:defineObjects/>
@@ -11,7 +11,7 @@
     if (!v.isEmpty()) {
       String lvl = vm.get("level", "h2");
       String h = lvl.equals("h1") ? "# " : lvl.equals("h3") ? "### " : "## ";
-      out.write("\n" + h + v + "\n\n");
+      out.write(h + v + "\n\n");
     }
   }
 %>

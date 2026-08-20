@@ -1,4 +1,4 @@
-<%@ page session="false" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
+<%@ page session="false" trimDirectiveWhitespaces="true" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
     import="org.apache.sling.api.resource.ValueMap,org.apache.sling.api.resource.Resource" %>
 <%@ taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0" %>
 <sling:defineObjects/>
@@ -9,7 +9,7 @@
   {
     Resource rows = resource.getChild("items");
     if (rows != null && rows.hasChildren()) {
-      out.write("\n| " + "Name" + " | " + "Value" + " |\n");
+      out.write("| " + "Name" + " | " + "Value" + " |\n");
       out.write("|---|---|\n");
       for (Resource row : rows.getChildren()) {
         ValueMap rv = row.getValueMap();

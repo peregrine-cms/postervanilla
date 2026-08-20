@@ -1,4 +1,4 @@
-<%@ page session="false" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
+<%@ page session="false" trimDirectiveWhitespaces="true" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
     import="org.apache.sling.api.resource.ValueMap" %>
 <%@ taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0" %>
 <sling:defineObjects/>
@@ -9,16 +9,16 @@
   {
     String txt = vm.get("prevtext", "").replaceAll("<[^>]+>", " ").replaceAll("[ \\t]+", " ").trim();
     String lnk = vm.get("prevlink", "#");
-    if (!txt.isEmpty()) out.write("\n[" + txt + "](" + lnk + ")\n\n");
+    if (!txt.isEmpty()) out.write("[" + txt + "](" + lnk + ")\n\n");
   }
   {
     String txt = vm.get("uptext", "").replaceAll("<[^>]+>", " ").replaceAll("[ \\t]+", " ").trim();
     String lnk = vm.get("uplink", "#");
-    if (!txt.isEmpty()) out.write("\n[" + txt + "](" + lnk + ")\n\n");
+    if (!txt.isEmpty()) out.write("[" + txt + "](" + lnk + ")\n\n");
   }
   {
     String txt = vm.get("nexttext", "").replaceAll("<[^>]+>", " ").replaceAll("[ \\t]+", " ").trim();
     String lnk = vm.get("nextlink", "#");
-    if (!txt.isEmpty()) out.write("\n[" + txt + "](" + lnk + ")\n\n");
+    if (!txt.isEmpty()) out.write("[" + txt + "](" + lnk + ")\n\n");
   }
 %>

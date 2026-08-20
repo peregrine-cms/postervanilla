@@ -1,4 +1,4 @@
-<%@ page session="false" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
+<%@ page session="false" trimDirectiveWhitespaces="true" contentType="text/plain;charset=UTF-8" pageEncoding="UTF-8"
     import="org.apache.sling.api.resource.ValueMap,org.apache.sling.api.resource.Resource" %>
 <%@ taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0" %>
 <sling:defineObjects/>
@@ -8,22 +8,22 @@
   ValueMap vm = resource.getValueMap();
   {
     String v = vm.get("logo", "").trim();
-    if (!v.isEmpty()) out.write("\n![" + vm.get("logoalt", "") + "](" + v + ")\n\n");
+    if (!v.isEmpty()) out.write("![" + vm.get("logoalt", "") + "](" + v + ")\n\n");
   }
   {
     String txt = vm.get("brand", "").replaceAll("<[^>]+>", " ").replaceAll("[ \\t]+", " ").trim();
     String lnk = vm.get("brandlink", "#");
-    if (!txt.isEmpty()) out.write("\n[" + txt + "](" + lnk + ")\n\n");
+    if (!txt.isEmpty()) out.write("[" + txt + "](" + lnk + ")\n\n");
   }
   {
     String txt = vm.get("boxtext", "").replaceAll("<[^>]+>", " ").replaceAll("[ \\t]+", " ").trim();
     String lnk = vm.get("boxlink", "#");
-    if (!txt.isEmpty()) out.write("\n[" + txt + "](" + lnk + ")\n\n");
+    if (!txt.isEmpty()) out.write("[" + txt + "](" + lnk + ")\n\n");
   }
   {
     Resource rows = resource.getChild("navitems");
     if (rows != null && rows.hasChildren()) {
-      out.write("\n| " + "Label" + " | " + "Link" + " |\n");
+      out.write("| " + "Label" + " | " + "Link" + " |\n");
       out.write("|---|---|\n");
       for (Resource row : rows.getChildren()) {
         ValueMap rv = row.getValueMap();
