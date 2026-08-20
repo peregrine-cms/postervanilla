@@ -171,6 +171,13 @@ a.pst-indexlist__row:hover { background: var(--pst-ink); color: var(--pst-orange
 .pst-datatable__name { font-family: var(--pst-font-mono); font-weight: 700; font-size: 13px; }
 .pst-datatable__value { margin: 0; font-size: 14px; color: var(--pst-soft); overflow-wrap: anywhere; }
 @media (max-width: 640px) { .pst-datatable__row { grid-template-columns: 2.6rem 1fr; } .pst-datatable__value { grid-column: 2; } }
+/* on ink: paper text and rules, full orange for the numbers and hover */
+.pst-band--ink .pst-datatable { border-top-color: var(--pst-paper); }
+.pst-band--ink .pst-datatable__row { border-bottom-color: rgba(245, 241, 232, 0.45); }
+.pst-band--ink .pst-datatable__row::before { color: var(--pst-orange); }
+.pst-band--ink .pst-datatable__name { color: var(--pst-paper); }
+.pst-band--ink .pst-datatable__value { color: rgba(245, 241, 232, 0.78); }
+.pst-band--ink .pst-datatable__row:hover .pst-datatable__name { color: var(--pst-orange); }
 
 /* ---- pagenav ------------------------------------------------------------------------ */
 .pst-pagenav { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: var(--pst-rule) solid var(--pst-ink); padding-block: 22px; font-family: var(--pst-font-mono); font-weight: 700; font-size: 13px; letter-spacing: 0.05em; }
