@@ -134,14 +134,22 @@ a.pst-indexlist__row:hover { background: var(--pst-ink); color: var(--pst-orange
 }
 
 /* ---- datatable ------------------------------------------------------------------- */
-.pst-datatable { margin: 0; display: flex; flex-direction: column; border-top: var(--pst-rule) solid var(--pst-ink); }
+.pst-datatable { margin: 0; display: flex; flex-direction: column; border-top: var(--pst-rule) solid var(--pst-ink); counter-reset: pst-row; }
 .pst-datatable__row {
-  display: grid; grid-template-columns: minmax(9rem, 16rem) 1fr; gap: 0 2rem;
+  display: grid; grid-template-columns: 2.6rem minmax(8rem, 15rem) 1fr; gap: 0 1.5rem;
   padding: 12px 4px; border-bottom: var(--pst-rule) solid var(--pst-ink); align-items: baseline;
 }
+/* rows are numbered the way the index and the claims are - it is one design */
+.pst-datatable__row::before {
+  counter-increment: pst-row;
+  content: counter(pst-row, decimal-leading-zero);
+  font-family: var(--pst-font-mono); font-weight: 700; font-size: 13px;
+  color: var(--pst-orange-ink);
+}
+.pst-datatable__row:hover .pst-datatable__name { color: var(--pst-orange-ink); }
 .pst-datatable__name { font-family: var(--pst-font-mono); font-weight: 700; font-size: 13px; }
 .pst-datatable__value { margin: 0; font-size: 14px; color: var(--pst-soft); overflow-wrap: anywhere; }
-@media (max-width: 640px) { .pst-datatable__row { grid-template-columns: 1fr; gap: 4px; } }
+@media (max-width: 640px) { .pst-datatable__row { grid-template-columns: 2.6rem 1fr; } .pst-datatable__value { grid-column: 2; } }
 
 /* ---- pagenav ------------------------------------------------------------------------ */
 .pst-pagenav { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: var(--pst-rule) solid var(--pst-ink); padding-block: 22px; font-family: var(--pst-font-mono); font-weight: 700; font-size: 13px; letter-spacing: 0.05em; }

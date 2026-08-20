@@ -5,6 +5,7 @@
         jcr:title="blank template"
         sling:resourceType="pagerenderervanilla/structure/page">
       <main jcr:primaryType="nt:unstructured"
-          sling:resourceType="pagerenderervanilla/structure/container"/>
+          sling:resourceType="pagerenderervanilla/structure/container"
+          tag="main"/>
     </jcr:content>
 </jcr:root>
