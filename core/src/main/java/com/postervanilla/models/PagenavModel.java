@@ -194,4 +194,72 @@ public class PagenavModel extends AbstractComponent {
     //GEN[:CUSTOMGETTERS
     //GEN]
 
+    /*
+     * Automatic prev/next, the themeclean-flex pager idea: when no links are
+     * authored, walk the sibling per:Page nodes of the containing page in
+     * their JCR order. Authored links always win (the render function checks
+     * them first), so a hand-wired chain - like the manual's - is untouched.
+     * Custom getters live outside the GEN blocks and survive hatch re-runs.
+     */
+    private Resource containingPage() {
+        Resource r = getResource();
+        while (r != null && !"per:Page".equals(r.getValueMap().get("jcr:primaryType", String.class))) {
+            r = r.getParent();
+        }
+        return r;
+    }
+
+    private java.util.List<Resource> siblingPages() {
+        java.util.List<Resource> pages = new java.util.ArrayList<>();
+        Resource page = containingPage();
+        if (page == null || page.getParent() == null) return pages;
+        for (Resource c : page.getParent().getChildren()) {
+            if ("per:Page".equals(c.getValueMap().get("jcr:primaryType", String.class))
+                    && c.getChild("jcr:content") != null) {
+                pages.add(c);
+            }
+        }
+        return pages;
+    }
+
+    private Resource siblingAt(int offset) {
+        Resource page = containingPage();
+        if (page == null) return null;
+        java.util.List<Resource> pages = siblingPages();
+        for (int i = 0; i < pages.size(); i++) {
+            if (pages.get(i).getPath().equals(page.getPath())) {
+                int at = i + offset;
+                return (at >= 0 && at < pages.size()) ? pages.get(at) : null;
+            }
+        }
+        return null;
+    }
+
+    private String pageTitle(Resource page) {
+        Resource content = page.getChild("jcr:content");
+        String title = content == null ? null
+                : content.getValueMap().get("jcr:title", String.class);
+        return title == null || title.isEmpty() ? page.getName() : title;
+    }
+
+    public String getAutoprevlink() {
+        Resource p = siblingAt(-1);
+        return p == null ? null : p.getPath();
+    }
+
+    public String getAutoprevtext() {
+        Resource p = siblingAt(-1);
+        return p == null ? null : pageTitle(p);
+    }
+
+    public String getAutonextlink() {
+        Resource p = siblingAt(1);
+        return p == null ? null : p.getPath();
+    }
+
+    public String getAutonexttext() {
+        Resource p = siblingAt(1);
+        return p == null ? null : pageTitle(p);
+    }
+
 }

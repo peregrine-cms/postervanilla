@@ -34,8 +34,12 @@
     var a = {};
     if (cls) a['class'] = cls;
     a.href = pathToUrl(href);
+    // template-merged nodes (header, footer) carry RELATIVE paths, so fall
+    // back to the site root the renderer publishes - without it their in-site
+    // links were opting out of SPA navigation and doing full reloads
     var m = String(node.path || '').match(/^\/content\/[^/]+/);
-    var root = m ? m[0] : null;
+    var root = m ? m[0]
+      : (String(window.$peregrineSiteRoot || '').match(/^\/content\/[^/]+/) || [null])[0];
     if (a.href.charAt(0) === '/' && (!root || a.href.indexOf(root + '/') !== 0)) {
       a['data-per-reload'] = 'true';
     }
@@ -286,12 +290,18 @@
     return wrap;
   };
 
+  // authored links win; without them the model's automatic sibling walk
+  // (themeclean-flex's pager idea) fills prev/next from the page tree
   PV.components['components-pagenav'] = function (node) {
     var wrap = el('nav', { 'class': 'pst-pagenav' + vis(node), 'data-per-path': node.path });
-    if (node.prevlink) wrap.appendChild(el('a', linkAttrs(node, node.prevlink), '‹ ' + (node.prevtext || 'Previous')));
+    var prevlink = node.prevlink || node.autoprevlink;
+    var prevtext = node.prevlink ? node.prevtext : node.autoprevtext;
+    var nextlink = node.nextlink || node.autonextlink;
+    var nexttext = node.nextlink ? node.nexttext : node.autonexttext;
+    if (prevlink) wrap.appendChild(el('a', linkAttrs(node, prevlink), '‹ ' + (prevtext || 'Previous')));
     else wrap.appendChild(el('span', {}, ''));
     if (node.uplink) wrap.appendChild(el('a', linkAttrs(node, node.uplink, 'pst-pagenav__up'), node.uptext || 'All chapters'));
-    if (node.nextlink) wrap.appendChild(el('a', linkAttrs(node, node.nextlink), (node.nexttext || 'Next') + ' ›'));
+    if (nextlink) wrap.appendChild(el('a', linkAttrs(node, nextlink), (nexttext || 'Next') + ' ›'));
     else wrap.appendChild(el('span', {}, ''));
     return wrap;
   };
