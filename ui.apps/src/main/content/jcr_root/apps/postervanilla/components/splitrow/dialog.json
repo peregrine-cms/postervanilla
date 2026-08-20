@@ -1,0 +1,56 @@
+{
+ "groups": [
+  {
+   "legend": "content",
+   "fields": [
+    {
+     "type": "material-select",
+     "values": [
+      {
+       "name": "50 / 50",
+       "value": "50-50"
+      },
+      {
+       "name": "58 / 42",
+       "value": "58-42"
+      },
+      {
+       "name": "42 / 58",
+       "value": "42-58"
+      }
+     ],
+     "placeholder": "ratio",
+     "label": "Column ratio",
+     "model": "ratio"
+    },
+    {
+     "type": "materialswitch",
+     "label": "Rule between the columns",
+     "model": "divided",
+     "valueOn": "true",
+     "valueOff": "false"
+    },
+    {
+     "type": "material-select",
+     "values": [
+      {
+       "name": "Always visible",
+       "value": "all"
+      },
+      {
+       "name": "Desktop only (821px and up)",
+       "value": "desktop"
+      },
+      {
+       "name": "Mobile only (up to 820px)",
+       "value": "mobile"
+      }
+     ],
+     "placeholder": "visibility",
+     "label": "Visibility",
+     "model": "visibility"
+    }
+   ]
+  }
+ ]
+}

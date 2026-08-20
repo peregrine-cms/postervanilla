@@ -144,6 +144,39 @@ const SPEC = {
     ],
     sample: { text: 'docker run -p 8080:8080 peregrinecms/peregrine-cms:v2-preview', comment: 'console at /content/adminv2 once it boots' },
   },
+  blkimage: {
+    title: 'Image (figure)', group: 'Blocks',
+    fields: [
+      { m: 'image', l: 'Image', t: 'path' },
+      { m: 'imagealt', l: 'Alt text', t: 'text' },
+      { m: 'caption', l: 'Caption (under the figure)', t: 'text' },
+      // videourl lives in the MODEL so a site-owned video component can
+      // superType this one (the docs site does exactly that)
+      { m: 'videourl', l: 'Video (mp4) - used by subtypes', t: 'text' },
+      { m: 'plain', l: 'Plain (no border or shadow)', t: 'switch' },
+    ],
+    sample: { imagealt: 'Set an image in the dialog' },
+  },
+  splitrow: {
+    title: 'Split Row (2 columns)', group: 'Structure', container: true,
+    fields: [
+      { m: 'ratio', l: 'Column ratio', t: 'select', d: '50-50',
+        v: [['50-50', '50 / 50'], ['58-42', '58 / 42'], ['42-58', '42 / 58']] },
+      { m: 'divided', l: 'Rule between the columns', t: 'switch' },
+    ],
+    sample: { ratio: '58-42' },
+  },
+  datatable: {
+    title: 'Data Table (name/value)', group: 'Content',
+    fields: [
+      { m: 'items', l: 'Rows', t: 'collection', f: [
+        { m: 'name', l: 'Name', t: 'text' }, { m: 'value', l: 'Value', t: 'text' }] },
+    ],
+    sample: {}, sampleChildren: { items: [
+      { name: 'text', value: 'The text the block renders' },
+      { name: 'size', value: 'display, band or item' },
+    ] },
+  },
   footer: {
     title: 'Footer', group: 'Structure',
     fields: [

@@ -207,6 +207,46 @@
     return wrap;
   };
 
+  PV.components['components-blkimage'] = function (node) {
+    var wrap = el('figure', { 'class': 'pst-blkimage' + (truthy(node.plain) ? ' pst-blkimage--plain' : '') + vis(node), 'data-per-path': node.path });
+    if (node.image) {
+      wrap.appendChild(el('img', { 'class': 'pst-blkimage__img', 'src': node.image, 'alt': node.imagealt || '', 'loading': 'lazy' }));
+    } else {
+      var hint = editHint(node, 'No image defined');
+      if (hint) wrap.appendChild(hint);
+    }
+    if (node.caption) wrap.appendChild(el('figcaption', { 'class': 'pst-blkimage__cap' }, node.caption));
+    return wrap;
+  };
+
+  PV.components['components-splitrow'] = function (node) {
+    var cls = 'pst-splitrow pst-splitrow--' + (node.ratio || '50-50') +
+      (truthy(node.divided) ? ' pst-splitrow--divided' : '') + vis(node);
+    var row = el('div', { 'class': cls, 'data-per-path': node.path });
+    if (EDIT) row.setAttribute('data-per-droptarget', 'true');
+    var kids = node.children || [];
+    // first child left, everything else right - same contract as the themes
+    var left = el('div', { 'class': 'pst-splitrow__cell' });
+    var right = el('div', { 'class': 'pst-splitrow__cell' });
+    kids.forEach(function (ch, i) { (i === 0 ? left : right).appendChild(PV.renderNode(ch)); });
+    if (!kids.length && EDIT) left.appendChild(el('div', { 'class': 'perIsEditAndEmpty' }, 'Drop two components here'));
+    row.appendChild(left);
+    row.appendChild(right);
+    return row;
+  };
+
+  PV.components['components-datatable'] = function (node) {
+    var wrap = el('dl', { 'class': 'pst-datatable' + vis(node), 'data-per-path': node.path });
+    (node.items || []).forEach(function (it) {
+      var row = el('div', { 'class': 'pst-datatable__row' });
+      row.appendChild(el('dt', { 'class': 'pst-datatable__name' }, it.name || ''));
+      row.appendChild(el('dd', { 'class': 'pst-datatable__value' }, it.value || ''));
+      wrap.appendChild(row);
+    });
+    if (!(node.items || []).length && EDIT) wrap.appendChild(el('div', { 'class': 'perIsEditAndEmpty' }, 'Add rows in the dialog'));
+    return wrap;
+  };
+
   /* ---- blocks --------------------------------------------------------------- */
 
   PV.components['components-blkheading'] = function (node) {
