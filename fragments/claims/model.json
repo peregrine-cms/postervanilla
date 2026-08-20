@@ -1,0 +1,37 @@
+{
+  "definitions": {
+    "Claims": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "items": {
+          "type": "object",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Claims",
+          "x-form-type": "collection",
+          "x-form-fieldLabel": [
+            "title"
+          ],
+          "properties": {
+            "title": {
+              "type": "string",
+              "x-source": "inject",
+              "x-form-label": "Claim",
+              "x-form-type": "text"
+            },
+            "text": {
+              "type": "string",
+              "x-source": "inject",
+              "x-form-label": "One supporting sentence",
+              "x-form-type": "text"
+            }
+          }
+        },
+        "visibility": {
+          "$ref": "schemas/shared.json#/definitions/visibility"
+        }
+      }
+    }
+  }
+}

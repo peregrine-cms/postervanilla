@@ -1,0 +1,9 @@
+{
+  "title": "Band (Section)",
+  "group": "Structure",
+  "model": {
+    "background": "paper",
+    "bordered": "true",
+    "contained": "true"
+  }
+}

@@ -1,50 +1,54 @@
 {
- "groups": [
-  {
-   "legend": "content",
-   "fields": [
+  "groups": [
     {
-     "type": "input",
-     "inputType": "text",
-     "placeholder": "text",
-     "label": "The command",
-     "model": "text"
-    },
-    {
-     "type": "input",
-     "inputType": "text",
-     "placeholder": "prompt",
-     "label": "Prompt",
-     "model": "prompt"
-    },
-    {
-     "type": "input",
-     "inputType": "text",
-     "placeholder": "comment",
-     "label": "Comment line under it (optional)",
-     "model": "comment"
-    },
-    {
-     "type": "material-select",
-     "values": [
-      {
-       "name": "Always visible",
-       "value": "all"
-      },
-      {
-       "name": "Desktop only (821px and up)",
-       "value": "desktop"
-      },
-      {
-       "name": "Mobile only (up to 820px)",
-       "value": "mobile"
-      }
-     ],
-     "placeholder": "visibility",
-     "label": "Visibility",
-     "model": "visibility"
+      "legend": "content",
+      "fields": [
+        {
+          "type": "input",
+          "inputType": "text",
+          "placeholder": "text",
+          "label": "The command",
+          "model": "text",
+          "x_form_group": "content"
+        },
+        {
+          "type": "input",
+          "inputType": "text",
+          "placeholder": "prompt",
+          "label": "Prompt",
+          "model": "prompt",
+          "x_form_group": "content"
+        },
+        {
+          "type": "input",
+          "inputType": "text",
+          "placeholder": "comment",
+          "label": "Comment line under it (optional)",
+          "model": "comment",
+          "x_form_group": "content"
+        },
+        {
+          "type": "material-select",
+          "values": [
+            {
+              "name": "Always visible",
+              "value": "all"
+            },
+            {
+              "name": "Desktop only (821px and up)",
+              "value": "desktop"
+            },
+            {
+              "name": "Mobile only (up to 820px)",
+              "value": "mobile"
+            }
+          ],
+          "placeholder": "visibility",
+          "label": "Visibility",
+          "model": "visibility",
+          "x_form_group": "content"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

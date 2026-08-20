@@ -1,0 +1,8 @@
+{
+  "title": "Button",
+  "group": "Blocks",
+  "model": {
+    "text": "Read the docs",
+    "style": "solid"
+  }
+}

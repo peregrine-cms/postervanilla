@@ -1,58 +1,60 @@
 {
- "groups": [
-  {
-   "legend": "content",
-   "fields": [
+  "groups": [
     {
-     "type": "collection",
-     "multifield": true,
-     "fieldLabel": [
-      [
-       "title"
-      ],
-      "value"
-     ],
-     "fields": [
-      {
-       "type": "input",
-       "inputType": "text",
-       "placeholder": "title",
-       "label": "Claim",
-       "model": "title"
-      },
-      {
-       "type": "input",
-       "inputType": "text",
-       "placeholder": "text",
-       "label": "One supporting sentence",
-       "model": "text"
-      }
-     ],
-     "placeholder": "items",
-     "label": "Claims",
-     "model": "items"
-    },
-    {
-     "type": "material-select",
-     "values": [
-      {
-       "name": "Always visible",
-       "value": "all"
-      },
-      {
-       "name": "Desktop only (821px and up)",
-       "value": "desktop"
-      },
-      {
-       "name": "Mobile only (up to 820px)",
-       "value": "mobile"
-      }
-     ],
-     "placeholder": "visibility",
-     "label": "Visibility",
-     "model": "visibility"
+      "legend": "content",
+      "fields": [
+        {
+          "type": "collection",
+          "multifield": true,
+          "fieldLabel": [
+            [
+              "title"
+            ],
+            "value"
+          ],
+          "fields": [
+            {
+              "type": "input",
+              "inputType": "text",
+              "placeholder": "title",
+              "label": "Claim",
+              "model": "title"
+            },
+            {
+              "type": "input",
+              "inputType": "text",
+              "placeholder": "text",
+              "label": "One supporting sentence",
+              "model": "text"
+            }
+          ],
+          "placeholder": "items",
+          "label": "Claims",
+          "model": "items",
+          "x_form_group": "content"
+        },
+        {
+          "type": "material-select",
+          "values": [
+            {
+              "name": "Always visible",
+              "value": "all"
+            },
+            {
+              "name": "Desktop only (821px and up)",
+              "value": "desktop"
+            },
+            {
+              "name": "Mobile only (up to 820px)",
+              "value": "mobile"
+            }
+          ],
+          "placeholder": "visibility",
+          "label": "Visibility",
+          "model": "visibility",
+          "x_form_group": "content"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

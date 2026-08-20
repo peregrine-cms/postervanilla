@@ -1,0 +1,21 @@
+{
+  "title": "Index (giant rows)",
+  "group": "Content",
+  "model": {
+    "startat": "1",
+    "items": [
+      {
+        "title": "Your first website",
+        "tag": "START HERE"
+      },
+      {
+        "title": "The editor",
+        "tag": "AUTHORING"
+      },
+      {
+        "title": "Versions and publishing",
+        "tag": "RUNNING"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Image (figure)",
+  "group": "Blocks",
+  "model": {
+    "imagealt": "Set an image in the dialog"
+  }
+}

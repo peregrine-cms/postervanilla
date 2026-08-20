@@ -1,0 +1,42 @@
+{
+  "definitions": {
+    "Ticker": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "text": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Ticker text (wrap a stretch in ** for orange)",
+          "x-form-type": "text"
+        },
+        "speed": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Speed",
+          "x-form-type": "materialselect",
+          "x-default": "normal",
+          "properties": {
+            "slow": {
+              "x-form-name": "Slow",
+              "x-form-value": "slow"
+            },
+            "normal": {
+              "x-form-name": "Normal",
+              "x-form-value": "normal"
+            },
+            "fast": {
+              "x-form-name": "Fast",
+              "x-form-value": "fast"
+            }
+          }
+        },
+        "visibility": {
+          "$ref": "schemas/shared.json#/definitions/visibility"
+        }
+      }
+    }
+  }
+}

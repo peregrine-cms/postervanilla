@@ -1,0 +1,9 @@
+{
+  "title": "Heading",
+  "group": "Blocks",
+  "model": {
+    "text": "The manual",
+    "size": "band",
+    "level": "h2"
+  }
+}

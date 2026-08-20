@@ -1,0 +1,83 @@
+{
+  "definitions": {
+    "Header": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "brand": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Brand (wordmark text)",
+          "x-form-type": "text"
+        },
+        "brandlink": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Brand link",
+          "x-form-type": "pathbrowser",
+          "x-form-browserRoot": "/content"
+        },
+        "logo": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Logo (mark)",
+          "x-form-type": "pathbrowser",
+          "x-form-browserRoot": "/content"
+        },
+        "logoalt": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Logo alt text",
+          "x-form-type": "text"
+        },
+        "navitems": {
+          "type": "object",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Navigation items",
+          "x-form-type": "collection",
+          "x-form-fieldLabel": [
+            "text"
+          ],
+          "properties": {
+            "text": {
+              "type": "string",
+              "x-source": "inject",
+              "x-form-label": "Label",
+              "x-form-type": "text"
+            },
+            "link": {
+              "type": "string",
+              "x-source": "inject",
+              "x-form-label": "Link",
+              "x-form-type": "pathbrowser",
+              "x-form-browserRoot": "/content"
+            }
+          }
+        },
+        "boxtext": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Boxed link label (e.g. GITHUB)",
+          "x-form-type": "text"
+        },
+        "boxlink": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Boxed link target",
+          "x-form-type": "pathbrowser",
+          "x-form-browserRoot": "/content"
+        },
+        "visibility": {
+          "$ref": "schemas/shared.json#/definitions/visibility"
+        }
+      }
+    }
+  }
+}

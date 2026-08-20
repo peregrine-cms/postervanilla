@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="per:Component" jcr:title="Claims (numbered)" group="Content">
-  <jcr:content jcr:primaryType="nt:unstructured" >
+  <jcr:content jcr:primaryType="nt:unstructured">
     <items jcr:primaryType="nt:unstructured">
-      <i0 jcr:primaryType="nt:unstructured" title="Docs that cannot lie" text="Every screenshot comes from a passing, asserted test run."/>
-      <i1 jcr:primaryType="nt:unstructured" title="Everything is content" text="One tree, versioned, readable as JSON from anywhere."/>
-      <i2 jcr:primaryType="nt:unstructured" title="Themes are yours" text="A site starts as a copy of a theme. Change what you copied."/>
+      <items0 jcr:primaryType="nt:unstructured" title="Docs that cannot lie" text="Every screenshot comes from a passing, asserted test run."/>
+      <items1 jcr:primaryType="nt:unstructured" title="Everything is content" text="One tree, versioned, readable as JSON from anywhere."/>
+      <items2 jcr:primaryType="nt:unstructured" title="Themes are yours" text="A site starts as a copy of a theme. Change what you copied."/>
     </items>
   </jcr:content>
 </jcr:root>

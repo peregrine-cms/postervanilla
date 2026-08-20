@@ -1,0 +1,37 @@
+{
+  "definitions": {
+    "Datatable": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "items": {
+          "type": "object",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Rows",
+          "x-form-type": "collection",
+          "x-form-fieldLabel": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "x-source": "inject",
+              "x-form-label": "Name",
+              "x-form-type": "text"
+            },
+            "value": {
+              "type": "string",
+              "x-source": "inject",
+              "x-form-label": "Value",
+              "x-form-type": "text"
+            }
+          }
+        },
+        "visibility": {
+          "$ref": "schemas/shared.json#/definitions/visibility"
+        }
+      }
+    }
+  }
+}

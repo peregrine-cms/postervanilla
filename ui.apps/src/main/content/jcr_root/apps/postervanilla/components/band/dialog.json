@@ -1,83 +1,94 @@
 {
- "groups": [
-  {
-   "legend": "content",
-   "fields": [
+  "groups": [
     {
-     "type": "material-select",
-     "values": [
-      {
-       "name": "Paper",
-       "value": "paper"
-      },
-      {
-       "name": "Orange field",
-       "value": "orange"
-      },
-      {
-       "name": "Black field",
-       "value": "ink"
-      }
-     ],
-     "placeholder": "background",
-     "label": "Background",
-     "model": "background"
-    },
-    {
-     "type": "materialswitch",
-     "label": "Heavy rule along the bottom",
-     "model": "bordered",
-     "valueOn": "true",
-     "valueOff": "false"
-    },
-    {
-     "type": "material-select",
-     "values": [
-      {
-       "name": "Normal",
-       "value": "normal"
-      },
-      {
-       "name": "Compact",
-       "value": "compact"
-      },
-      {
-       "name": "Roomy",
-       "value": "roomy"
-      }
-     ],
-     "placeholder": "padding",
-     "label": "Vertical padding",
-     "model": "padding"
-    },
-    {
-     "type": "materialswitch",
-     "label": "Contain content to the page column",
-     "model": "contained",
-     "valueOn": "true",
-     "valueOff": "false"
-    },
-    {
-     "type": "material-select",
-     "values": [
-      {
-       "name": "Always visible",
-       "value": "all"
-      },
-      {
-       "name": "Desktop only (821px and up)",
-       "value": "desktop"
-      },
-      {
-       "name": "Mobile only (up to 820px)",
-       "value": "mobile"
-      }
-     ],
-     "placeholder": "visibility",
-     "label": "Visibility",
-     "model": "visibility"
+      "legend": "content",
+      "fields": [
+        {
+          "type": "material-select",
+          "values": [
+            {
+              "name": "Paper",
+              "value": "paper"
+            },
+            {
+              "name": "Orange field",
+              "value": "orange"
+            },
+            {
+              "name": "Black field",
+              "value": "ink"
+            }
+          ],
+          "placeholder": "background",
+          "label": "Background",
+          "model": "background",
+          "x_form_group": "content"
+        },
+        {
+          "type": "materialswitch",
+          "textOn": "yes",
+          "textOff": "no",
+          "valueOn": "true",
+          "valueOff": "false",
+          "placeholder": "bordered",
+          "label": "Heavy rule along the bottom",
+          "model": "bordered",
+          "x_form_group": "content"
+        },
+        {
+          "type": "material-select",
+          "values": [
+            {
+              "name": "Normal",
+              "value": "normal"
+            },
+            {
+              "name": "Compact",
+              "value": "compact"
+            },
+            {
+              "name": "Roomy",
+              "value": "roomy"
+            }
+          ],
+          "placeholder": "padding",
+          "label": "Vertical padding",
+          "model": "padding",
+          "x_form_group": "content"
+        },
+        {
+          "type": "materialswitch",
+          "textOn": "yes",
+          "textOff": "no",
+          "valueOn": "true",
+          "valueOff": "false",
+          "placeholder": "contained",
+          "label": "Contain content to the page column",
+          "model": "contained",
+          "x_form_group": "content"
+        },
+        {
+          "type": "material-select",
+          "values": [
+            {
+              "name": "Always visible",
+              "value": "all"
+            },
+            {
+              "name": "Desktop only (821px and up)",
+              "value": "desktop"
+            },
+            {
+              "name": "Mobile only (up to 820px)",
+              "value": "mobile"
+            }
+          ],
+          "placeholder": "visibility",
+          "label": "Visibility",
+          "model": "visibility",
+          "x_form_group": "content"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

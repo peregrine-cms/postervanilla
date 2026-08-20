@@ -1,0 +1,9 @@
+{
+  "title": "Footer",
+  "group": "Structure",
+  "model": {
+    "brand": "POSTER",
+    "lefttext": "OPEN SOURCE — APACHE-2.0",
+    "righttext": "BUILT WITH PEREGRINE CMS"
+  }
+}

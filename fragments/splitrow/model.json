@@ -1,0 +1,42 @@
+{
+  "definitions": {
+    "Splitrow": {
+      "type": "object",
+      "x-type": "container",
+      "properties": {
+        "ratio": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Column ratio",
+          "x-form-type": "materialselect",
+          "x-default": "50-50",
+          "properties": {
+            "50-50": {
+              "x-form-name": "50 / 50",
+              "x-form-value": "50-50"
+            },
+            "58-42": {
+              "x-form-name": "58 / 42",
+              "x-form-value": "58-42"
+            },
+            "42-58": {
+              "x-form-name": "42 / 58",
+              "x-form-value": "42-58"
+            }
+          }
+        },
+        "divided": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Rule between the columns",
+          "x-form-type": "materialswitch"
+        },
+        "visibility": {
+          "$ref": "schemas/shared.json#/definitions/visibility"
+        }
+      }
+    }
+  }
+}

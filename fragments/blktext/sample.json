@@ -1,0 +1,7 @@
+{
+  "title": "Text",
+  "group": "Blocks",
+  "model": {
+    "text": "<p>Every screenshot in the manual comes from a passing, asserted test run against a clean install.</p>"
+  }
+}

@@ -24,7 +24,8 @@ site's own namespace.
 
 | | |
 |---|---|
-| `tools/gen-components.mjs` | THE SOURCE OF TRUTH for components: one SPEC entry per component generates its `.content.xml`, `dialog.json` and Sling model. percli-hatch3 is not on this machine; this is the stand-in. Edit the SPEC, re-run, rebuild. |
+| `fragments/<name>/model.json` | THE SOURCE OF TRUTH for a component: the schema percli-hatch3 turns into its `dialog.json`, Sling model and `md.jsp`. `sample.json` beside it becomes the component's `.content.xml` (title, group, palette sample). Edit, re-run `percli-hatch3 -f -m --md '*'` from the repo root, rebuild. |
+| `schemas/shared.json` | schema definitions shared across components (visibility) |
 | `etc/felibs/postervanilla/js/components.js` | hand-written render functions, `PV.components['components-<name>']` |
 | `etc/felibs/postervanilla/css/` | `variables` (tokens) / `fonts` / `base` / `components` |
 | `content/postervanilla/pages/index` | the reference page: every component once. If it looks wrong, the theme is wrong. |

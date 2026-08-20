@@ -1,0 +1,12 @@
+{
+  "title": "Hero (Poster)",
+  "group": "Content",
+  "model": {
+    "title": "What you edit is what you ship",
+    "footnote": "literally. The editor renders your real site - the page you drag components onto is the page a visitor gets.",
+    "ctatext": "Read the docs",
+    "cta2text": "GitHub",
+    "image": "/content/postervanilla/assets/mark.svg",
+    "imagealt": ""
+  }
+}

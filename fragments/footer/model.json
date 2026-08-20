@@ -1,0 +1,42 @@
+{
+  "definitions": {
+    "Footer": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "brand": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Brand",
+          "x-form-type": "text"
+        },
+        "logo": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Logo (mark)",
+          "x-form-type": "pathbrowser",
+          "x-form-browserRoot": "/content"
+        },
+        "lefttext": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Left text (after the brand)",
+          "x-form-type": "text"
+        },
+        "righttext": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Right text",
+          "x-form-type": "text"
+        },
+        "visibility": {
+          "$ref": "schemas/shared.json#/definitions/visibility"
+        }
+      }
+    }
+  }
+}

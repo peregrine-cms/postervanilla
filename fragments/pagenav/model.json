@@ -1,0 +1,58 @@
+{
+  "definitions": {
+    "Pagenav": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "prevtext": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Previous label",
+          "x-form-type": "text"
+        },
+        "prevlink": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Previous link",
+          "x-form-type": "pathbrowser",
+          "x-form-browserRoot": "/content"
+        },
+        "uptext": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Up label",
+          "x-form-type": "text"
+        },
+        "uplink": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Up link",
+          "x-form-type": "pathbrowser",
+          "x-form-browserRoot": "/content"
+        },
+        "nexttext": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Next label",
+          "x-form-type": "text"
+        },
+        "nextlink": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Next link",
+          "x-form-type": "pathbrowser",
+          "x-form-browserRoot": "/content"
+        },
+        "visibility": {
+          "$ref": "schemas/shared.json#/definitions/visibility"
+        }
+      }
+    }
+  }
+}

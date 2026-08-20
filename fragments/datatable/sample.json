@@ -1,0 +1,16 @@
+{
+  "title": "Data Table (name/value)",
+  "group": "Content",
+  "model": {
+    "items": [
+      {
+        "name": "text",
+        "value": "The text the block renders"
+      },
+      {
+        "name": "size",
+        "value": "display, band or item"
+      }
+    ]
+  }
+}

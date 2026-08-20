@@ -1,0 +1,42 @@
+{
+  "definitions": {
+    "Blktext": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "text": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Text",
+          "x-form-type": "texteditor"
+        },
+        "style": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Style",
+          "x-form-type": "materialselect",
+          "x-default": "body",
+          "properties": {
+            "body": {
+              "x-form-name": "Body",
+              "x-form-value": "body"
+            },
+            "mono": {
+              "x-form-name": "Mono",
+              "x-form-value": "mono"
+            },
+            "footnote": {
+              "x-form-name": "Footnote (mono, small)",
+              "x-form-value": "footnote"
+            }
+          }
+        },
+        "visibility": {
+          "$ref": "schemas/shared.json#/definitions/visibility"
+        }
+      }
+    }
+  }
+}

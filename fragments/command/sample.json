@@ -1,0 +1,8 @@
+{
+  "title": "Command line",
+  "group": "Blocks",
+  "model": {
+    "text": "docker run -p 8080:8080 peregrinecms/peregrine-cms:v2-preview",
+    "comment": "console at /content/adminv2 once it boots"
+  }
+}

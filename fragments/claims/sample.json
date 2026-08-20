@@ -1,0 +1,20 @@
+{
+  "title": "Claims (numbered)",
+  "group": "Content",
+  "model": {
+    "items": [
+      {
+        "title": "Docs that cannot lie",
+        "text": "Every screenshot comes from a passing, asserted test run."
+      },
+      {
+        "title": "Everything is content",
+        "text": "One tree, versioned, readable as JSON from anywhere."
+      },
+      {
+        "title": "Themes are yours",
+        "text": "A site starts as a copy of a theme. Change what you copied."
+      }
+    ]
+  }
+}

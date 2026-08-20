@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="per:Component" jcr:title="Index (giant rows)" group="Content">
   <jcr:content jcr:primaryType="nt:unstructured" startat="1">
     <items jcr:primaryType="nt:unstructured">
-      <i0 jcr:primaryType="nt:unstructured" title="Your first website" tag="START HERE"/>
-      <i1 jcr:primaryType="nt:unstructured" title="The editor" tag="AUTHORING"/>
-      <i2 jcr:primaryType="nt:unstructured" title="Versions and publishing" tag="RUNNING"/>
+      <items0 jcr:primaryType="nt:unstructured" title="Your first website" tag="START HERE"/>
+      <items1 jcr:primaryType="nt:unstructured" title="The editor" tag="AUTHORING"/>
+      <items2 jcr:primaryType="nt:unstructured" title="Versions and publishing" tag="RUNNING"/>
     </items>
   </jcr:content>
 </jcr:root>

@@ -1,56 +1,62 @@
 {
- "groups": [
-  {
-   "legend": "content",
-   "fields": [
+  "groups": [
     {
-     "type": "material-select",
-     "values": [
-      {
-       "name": "50 / 50",
-       "value": "50-50"
-      },
-      {
-       "name": "58 / 42",
-       "value": "58-42"
-      },
-      {
-       "name": "42 / 58",
-       "value": "42-58"
-      }
-     ],
-     "placeholder": "ratio",
-     "label": "Column ratio",
-     "model": "ratio"
-    },
-    {
-     "type": "materialswitch",
-     "label": "Rule between the columns",
-     "model": "divided",
-     "valueOn": "true",
-     "valueOff": "false"
-    },
-    {
-     "type": "material-select",
-     "values": [
-      {
-       "name": "Always visible",
-       "value": "all"
-      },
-      {
-       "name": "Desktop only (821px and up)",
-       "value": "desktop"
-      },
-      {
-       "name": "Mobile only (up to 820px)",
-       "value": "mobile"
-      }
-     ],
-     "placeholder": "visibility",
-     "label": "Visibility",
-     "model": "visibility"
+      "legend": "content",
+      "fields": [
+        {
+          "type": "material-select",
+          "values": [
+            {
+              "name": "50 / 50",
+              "value": "50-50"
+            },
+            {
+              "name": "58 / 42",
+              "value": "58-42"
+            },
+            {
+              "name": "42 / 58",
+              "value": "42-58"
+            }
+          ],
+          "placeholder": "ratio",
+          "label": "Column ratio",
+          "model": "ratio",
+          "x_form_group": "content"
+        },
+        {
+          "type": "materialswitch",
+          "textOn": "yes",
+          "textOff": "no",
+          "valueOn": "true",
+          "valueOff": "false",
+          "placeholder": "divided",
+          "label": "Rule between the columns",
+          "model": "divided",
+          "x_form_group": "content"
+        },
+        {
+          "type": "material-select",
+          "values": [
+            {
+              "name": "Always visible",
+              "value": "all"
+            },
+            {
+              "name": "Desktop only (821px and up)",
+              "value": "desktop"
+            },
+            {
+              "name": "Mobile only (up to 820px)",
+              "value": "mobile"
+            }
+          ],
+          "placeholder": "visibility",
+          "label": "Visibility",
+          "model": "visibility",
+          "x_form_group": "content"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

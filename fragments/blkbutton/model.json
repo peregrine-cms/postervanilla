@@ -1,0 +1,50 @@
+{
+  "definitions": {
+    "Blkbutton": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "text": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Label",
+          "x-form-type": "text"
+        },
+        "link": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Link",
+          "x-form-type": "pathbrowser",
+          "x-form-browserRoot": "/content"
+        },
+        "style": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Style",
+          "x-form-type": "materialselect",
+          "x-default": "solid",
+          "properties": {
+            "solid": {
+              "x-form-name": "Solid (black)",
+              "x-form-value": "solid"
+            },
+            "outline": {
+              "x-form-name": "Outline",
+              "x-form-value": "outline"
+            },
+            "box": {
+              "x-form-name": "Orange box",
+              "x-form-value": "box"
+            }
+          }
+        },
+        "visibility": {
+          "$ref": "schemas/shared.json#/definitions/visibility"
+        }
+      }
+    }
+  }
+}

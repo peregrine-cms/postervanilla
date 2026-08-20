@@ -1,64 +1,73 @@
 {
- "groups": [
-  {
-   "legend": "content",
-   "fields": [
+  "groups": [
     {
-     "type": "pathbrowser",
-     "browserRoot": "/content",
-     "placeholder": "image",
-     "label": "Image",
-     "model": "image"
-    },
-    {
-     "type": "input",
-     "inputType": "text",
-     "placeholder": "imagealt",
-     "label": "Alt text",
-     "model": "imagealt"
-    },
-    {
-     "type": "input",
-     "inputType": "text",
-     "placeholder": "caption",
-     "label": "Caption (under the figure)",
-     "model": "caption"
-    },
-    {
-     "type": "input",
-     "inputType": "text",
-     "placeholder": "videourl",
-     "label": "Video (mp4) - used by subtypes",
-     "model": "videourl"
-    },
-    {
-     "type": "materialswitch",
-     "label": "Plain (no border or shadow)",
-     "model": "plain",
-     "valueOn": "true",
-     "valueOff": "false"
-    },
-    {
-     "type": "material-select",
-     "values": [
-      {
-       "name": "Always visible",
-       "value": "all"
-      },
-      {
-       "name": "Desktop only (821px and up)",
-       "value": "desktop"
-      },
-      {
-       "name": "Mobile only (up to 820px)",
-       "value": "mobile"
-      }
-     ],
-     "placeholder": "visibility",
-     "label": "Visibility",
-     "model": "visibility"
+      "legend": "content",
+      "fields": [
+        {
+          "type": "pathbrowser",
+          "browserRoot": "/content",
+          "placeholder": "image",
+          "label": "Image",
+          "model": "image",
+          "x_form_group": "content"
+        },
+        {
+          "type": "input",
+          "inputType": "text",
+          "placeholder": "imagealt",
+          "label": "Alt text",
+          "model": "imagealt",
+          "x_form_group": "content"
+        },
+        {
+          "type": "input",
+          "inputType": "text",
+          "placeholder": "caption",
+          "label": "Caption (under the figure)",
+          "model": "caption",
+          "x_form_group": "content"
+        },
+        {
+          "type": "input",
+          "inputType": "text",
+          "placeholder": "videourl",
+          "label": "Video (mp4) - used by subtypes",
+          "model": "videourl",
+          "x_form_group": "content"
+        },
+        {
+          "type": "materialswitch",
+          "textOn": "yes",
+          "textOff": "no",
+          "valueOn": "true",
+          "valueOff": "false",
+          "placeholder": "plain",
+          "label": "Plain (no border or shadow)",
+          "model": "plain",
+          "x_form_group": "content"
+        },
+        {
+          "type": "material-select",
+          "values": [
+            {
+              "name": "Always visible",
+              "value": "all"
+            },
+            {
+              "name": "Desktop only (821px and up)",
+              "value": "desktop"
+            },
+            {
+              "name": "Mobile only (up to 820px)",
+              "value": "mobile"
+            }
+          ],
+          "placeholder": "visibility",
+          "label": "Visibility",
+          "model": "visibility",
+          "x_form_group": "content"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }
