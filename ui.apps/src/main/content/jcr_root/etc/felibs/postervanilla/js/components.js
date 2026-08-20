@@ -21,6 +21,26 @@
     return /\.\w+$/.test(p) ? p : p + '.html';
   }
   function truthy(v) { return v === true || v === 'true'; }
+  /*
+   * Anchor attributes, with the one decision that makes cross-site links
+   * work: the runtime intercepts internal-looking links and swaps the page
+   * MODEL in place (fetching <path>.data.json). That is right inside this
+   * site and wrong everywhere else - another site's page needs its own
+   * felib, and short URLs (/first-site.html) only exist at the CDN - so any
+   * link that leaves the site's own content root opts out with
+   * data-per-reload and gets a real browser navigation.
+   */
+  function linkAttrs(node, href, cls) {
+    var a = {};
+    if (cls) a['class'] = cls;
+    a.href = pathToUrl(href);
+    var m = String(node.path || '').match(/^\/content\/[^/]+/);
+    var root = m ? m[0] : null;
+    if (a.href.charAt(0) === '/' && (!root || a.href.indexOf(root + '/') !== 0)) {
+      a['data-per-reload'] = 'true';
+    }
+    return a;
+  }
   function vis(node) {
     return node.visibility === 'desktop' ? ' pst--desktop'
       : node.visibility === 'mobile' ? ' pst--mobile' : '';
@@ -52,15 +72,15 @@
   PV.components['components-header'] = function (node) {
     var header = el('header', { 'class': 'pst-header' + vis(node), 'data-per-path': node.path });
     var bar = el('div', { 'class': 'pst-container pst-header__bar' });
-    var brand = el('a', { 'class': 'pst-header__brand', 'href': pathToUrl(node.brandlink) });
+    var brand = el('a', linkAttrs(node, node.brandlink, 'pst-header__brand'));
     if (node.logo) brand.appendChild(el('img', { 'class': 'pst-header__logo', 'src': node.logo, 'alt': node.logoalt || node.brand || '' }));
     if (node.brand) brand.appendChild(el('span', { 'class': 'pst-header__wordmark' }, node.brand));
     bar.appendChild(brand);
     var nav = el('nav', { 'class': 'pst-header__nav' });
     (node.navitems || []).forEach(function (it) {
-      nav.appendChild(el('a', { 'href': pathToUrl(it.link) }, it.text || ''));
+      nav.appendChild(el('a', linkAttrs(node, it.link), it.text || ''));
     });
-    if (node.boxtext) nav.appendChild(el('a', { 'class': 'pst-header__box', 'href': pathToUrl(node.boxlink) }, node.boxtext));
+    if (node.boxtext) nav.appendChild(el('a', linkAttrs(node, node.boxlink, 'pst-header__box'), node.boxtext));
     bar.appendChild(nav);
     header.appendChild(bar);
     return header;
@@ -113,8 +133,8 @@
       row.appendChild(el('div', fnAttrs, node.footnote));
     }
     var ctas = el('div', { 'class': 'pst-hero__ctas' });
-    if (node.ctatext) ctas.appendChild(el('a', { 'class': 'pst-btn pst-btn--solid', 'href': pathToUrl(node.ctalink) }, node.ctatext));
-    if (node.cta2text) ctas.appendChild(el('a', { 'class': 'pst-btn pst-btn--outline', 'href': pathToUrl(node.cta2link) }, node.cta2text));
+    if (node.ctatext) ctas.appendChild(el('a', linkAttrs(node, node.ctalink, 'pst-btn pst-btn--solid'), node.ctatext));
+    if (node.cta2text) ctas.appendChild(el('a', linkAttrs(node, node.cta2link, 'pst-btn pst-btn--outline'), node.cta2text));
     if (ctas.children.length) row.appendChild(ctas);
     inner.appendChild(row);
     section.appendChild(inner);
@@ -164,7 +184,7 @@
     items.forEach(function (it, i) {
       var n = start + i;
       var row = el(it.link ? 'a' : 'div', it.link
-        ? { 'class': 'pst-indexlist__row', 'href': pathToUrl(it.link) }
+        ? linkAttrs(node, it.link, 'pst-indexlist__row')
         : { 'class': 'pst-indexlist__row' });
       row.appendChild(el('span', { 'class': 'pst-indexlist__num' }, (n < 10 ? '0' : '') + n));
       row.appendChild(el('span', { 'class': 'pst-indexlist__title' }, it.title || ''));
@@ -207,7 +227,7 @@
     var s = node.style === 'outline' ? 'pst-btn pst-btn--outline'
       : node.style === 'box' ? 'pst-btn pst-btn--box'
       : 'pst-btn pst-btn--solid';
-    var a = { 'class': s, 'href': pathToUrl(node.link) };
+    var a = linkAttrs(node, node.link, s);
     if (EDIT) a['data-per-inline'] = 'model.text';
     wrap.appendChild(el('a', a, node.text || 'Button'));
     return wrap;
@@ -215,10 +235,10 @@
 
   PV.components['components-pagenav'] = function (node) {
     var wrap = el('nav', { 'class': 'pst-pagenav' + vis(node), 'data-per-path': node.path });
-    if (node.prevlink) wrap.appendChild(el('a', { 'href': pathToUrl(node.prevlink) }, '‹ ' + (node.prevtext || 'Previous')));
+    if (node.prevlink) wrap.appendChild(el('a', linkAttrs(node, node.prevlink), '‹ ' + (node.prevtext || 'Previous')));
     else wrap.appendChild(el('span', {}, ''));
-    if (node.uplink) wrap.appendChild(el('a', { 'class': 'pst-pagenav__up', 'href': pathToUrl(node.uplink) }, node.uptext || 'All chapters'));
-    if (node.nextlink) wrap.appendChild(el('a', { 'href': pathToUrl(node.nextlink) }, (node.nexttext || 'Next') + ' ›'));
+    if (node.uplink) wrap.appendChild(el('a', linkAttrs(node, node.uplink, 'pst-pagenav__up'), node.uptext || 'All chapters'));
+    if (node.nextlink) wrap.appendChild(el('a', linkAttrs(node, node.nextlink), (node.nexttext || 'Next') + ' ›'));
     else wrap.appendChild(el('span', {}, ''));
     return wrap;
   };

@@ -7,8 +7,8 @@
         jcr:title="Poster Templates"
         sling:resourceType="pagerenderervanilla/structure/page"
         brand="Poster"
-        siteCSS="[/etc/felibs/postervanilla/css/variables.css,/etc/felibs/postervanilla/css/fonts.css,/etc/felibs/postervanilla/css/base.css,/etc/felibs/postervanilla/css/components.css]"
-        siteJS="[/etc/felibs/pagerenderervanilla/js/runtime.js,/etc/felibs/postervanilla/js/components.js]"/>
+        siteCSS="[/etc/felibs/postervanilla/css/variables.css?v=1,/etc/felibs/postervanilla/css/fonts.css?v=1,/etc/felibs/postervanilla/css/base.css?v=1,/etc/felibs/postervanilla/css/components.css?v=1]"
+        siteJS="[/etc/felibs/pagerenderervanilla/js/runtime.js?v=1,/etc/felibs/postervanilla/js/components.js?v=1]"/>
     <blank/>
     <standard/>
 </jcr:root>
