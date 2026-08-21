@@ -1,0 +1,68 @@
+{
+  "definitions": {
+    "Blkimage": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "image": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Image",
+          "x-form-type": "pathbrowser",
+          "x-form-browserRoot": "/content"
+        },
+        "imagealt": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Alt text",
+          "x-form-type": "text"
+        },
+        "caption": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Caption (under the figure)",
+          "x-form-type": "text"
+        },
+        "videourl": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Video (mp4) - used by subtypes",
+          "x-form-type": "text"
+        },
+        "plain": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Plain (no border or shadow)",
+          "x-form-type": "materialswitch"
+        },
+        "visibility": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Visibility",
+          "x-form-type": "materialselect",
+          "x-default": "all",
+          "properties": {
+            "all": {
+              "x-form-name": "Always visible",
+              "x-form-value": "all"
+            },
+            "desktop": {
+              "x-form-name": "Desktop only (821px and up)",
+              "x-form-value": "desktop"
+            },
+            "mobile": {
+              "x-form-name": "Mobile only (up to 820px)",
+              "x-form-value": "mobile"
+            }
+          }
+        }
+      }
+    }
+  }
+}

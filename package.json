@@ -1,0 +1,10 @@
+{
+  "name": "postervanilla",
+  "version": "1.0-SNAPSHOT",
+  "private": true,
+  "scripts": {
+    "build": "percli build",
+    "deploy": "percli deploy",
+    "dev": "percli dev"
+  }
+}

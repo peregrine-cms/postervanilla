@@ -3,5 +3,6 @@
   "group": "Structure",
   "model": {
     "uptext": "All chapters"
-  }
+  },
+  "superType": "pagerenderervanilla/components/pagenav"
 }

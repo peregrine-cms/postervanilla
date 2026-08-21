@@ -1,0 +1,56 @@
+{
+  "definitions": {
+    "Datatable": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "items": {
+          "type": "object",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Rows",
+          "x-form-type": "collection",
+          "x-form-fieldLabel": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "x-source": "inject",
+              "x-form-label": "Name",
+              "x-form-type": "text"
+            },
+            "value": {
+              "type": "string",
+              "x-source": "inject",
+              "x-form-label": "Value",
+              "x-form-type": "text"
+            }
+          }
+        },
+        "visibility": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Visibility",
+          "x-form-type": "materialselect",
+          "x-default": "all",
+          "properties": {
+            "all": {
+              "x-form-name": "Always visible",
+              "x-form-value": "all"
+            },
+            "desktop": {
+              "x-form-name": "Desktop only (821px and up)",
+              "x-form-value": "desktop"
+            },
+            "mobile": {
+              "x-form-name": "Mobile only (up to 820px)",
+              "x-form-value": "mobile"
+            }
+          }
+        }
+      }
+    }
+  }
+}

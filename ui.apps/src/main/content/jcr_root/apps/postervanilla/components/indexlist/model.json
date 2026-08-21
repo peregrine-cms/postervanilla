@@ -1,0 +1,71 @@
+{
+  "definitions": {
+    "Indexlist": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "items": {
+          "type": "object",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Rows",
+          "x-form-type": "collection",
+          "x-form-fieldLabel": [
+            "title"
+          ],
+          "properties": {
+            "title": {
+              "type": "string",
+              "x-source": "inject",
+              "x-form-label": "Title",
+              "x-form-type": "text"
+            },
+            "tag": {
+              "type": "string",
+              "x-source": "inject",
+              "x-form-label": "Tag (right-hand label)",
+              "x-form-type": "text"
+            },
+            "link": {
+              "type": "string",
+              "x-source": "inject",
+              "x-form-label": "Link",
+              "x-form-type": "pathbrowser",
+              "x-form-browserRoot": "/content"
+            }
+          }
+        },
+        "startat": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "First number",
+          "x-form-type": "text",
+          "x-default": "1"
+        },
+        "visibility": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Visibility",
+          "x-form-type": "materialselect",
+          "x-default": "all",
+          "properties": {
+            "all": {
+              "x-form-name": "Always visible",
+              "x-form-value": "all"
+            },
+            "desktop": {
+              "x-form-name": "Desktop only (821px and up)",
+              "x-form-value": "desktop"
+            },
+            "mobile": {
+              "x-form-name": "Mobile only (up to 820px)",
+              "x-form-value": "mobile"
+            }
+          }
+        }
+      }
+    }
+  }
+}

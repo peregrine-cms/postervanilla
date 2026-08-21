@@ -1,0 +1,47 @@
+{
+  "definitions": {
+    "Codeblock": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Filename tab (optional)",
+          "x-form-type": "text"
+        },
+        "code": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "The code, verbatim",
+          "x-form-type": "textarea",
+          "x-form-rows": 14
+        },
+        "visibility": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Visibility",
+          "x-form-type": "materialselect",
+          "x-default": "all",
+          "properties": {
+            "all": {
+              "x-form-name": "Always visible",
+              "x-form-value": "all"
+            },
+            "desktop": {
+              "x-form-name": "Desktop only (821px and up)",
+              "x-form-value": "desktop"
+            },
+            "mobile": {
+              "x-form-name": "Mobile only (up to 820px)",
+              "x-form-value": "mobile"
+            }
+          }
+        }
+      }
+    }
+  }
+}

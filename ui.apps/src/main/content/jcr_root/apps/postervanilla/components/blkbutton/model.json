@@ -1,0 +1,69 @@
+{
+  "definitions": {
+    "Blkbutton": {
+      "type": "object",
+      "x-type": "component",
+      "properties": {
+        "text": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Label",
+          "x-form-type": "text"
+        },
+        "link": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Link",
+          "x-form-type": "pathbrowser",
+          "x-form-browserRoot": "/content"
+        },
+        "style": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Style",
+          "x-form-type": "materialselect",
+          "x-default": "solid",
+          "properties": {
+            "solid": {
+              "x-form-name": "Solid (black)",
+              "x-form-value": "solid"
+            },
+            "outline": {
+              "x-form-name": "Outline",
+              "x-form-value": "outline"
+            },
+            "box": {
+              "x-form-name": "Orange box",
+              "x-form-value": "box"
+            }
+          }
+        },
+        "visibility": {
+          "type": "string",
+          "x-source": "inject",
+          "x-form-group": "content",
+          "x-form-label": "Visibility",
+          "x-form-type": "materialselect",
+          "x-default": "all",
+          "properties": {
+            "all": {
+              "x-form-name": "Always visible",
+              "x-form-value": "all"
+            },
+            "desktop": {
+              "x-form-name": "Desktop only (821px and up)",
+              "x-form-value": "desktop"
+            },
+            "mobile": {
+              "x-form-name": "Mobile only (up to 820px)",
+              "x-form-value": "mobile"
+            }
+          }
+        }
+      }
+    }
+  }
+}
